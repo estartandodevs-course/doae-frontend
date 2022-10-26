@@ -1,10 +1,12 @@
 import { Link, Outlet } from 'react-router-dom';
+import SearchBar from './../components/searchbar/SearchBar';
 
 export default function Root() {
   return (
     <>
       <div id="sidebar">
         <h1>React Router Contacts</h1>
+        <SearchBar />
         <div>
           <form id="search-form" role="search">
             <input id="q" aria-label="Search contacts" placeholder="Search" type="search" name="q" />
