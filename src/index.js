@@ -1,11 +1,27 @@
-import App from './App';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ErrorPage from './routes/error-page';
+import Root from './routes/root';
+import './index.css';
+import Contact from './routes/contact';
 
-const container = document.getElementById('root');
-const root = createRoot(container);
-root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: 'contacts/:contactId',
+        element: <Contact />,
+      },
+    ],
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
