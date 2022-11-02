@@ -1,12 +1,12 @@
-import React from 'react';
-import { SearchBar, SearchBarContainer } from './styles';
+import { FormStyle } from './SearchBar.styles';
 
-const StyledInput = () => {
+function SearchBar() {
   return (
-    <SearchBarContainer>
-      <SearchBar type="text" placeholder="Pesquisar" />
-    </SearchBarContainer>
+    <FormStyle>
+      <img src="./icons/magnifierIcon.png" alt="" />
+      <input placeholder="Pesquisar" type="search" />
+    </FormStyle>
   );
-};
+}
 
-export default StyledInput;
+export default SearchBar;

@@ -1,27 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import ErrorPage from './routes/error-page';
-import Root from './routes/root';
-import './index.css';
-import Contact from './routes/contact';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Root />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: 'contacts/:contactId',
-        element: <Contact />,
-      },
-    ],
-  },
-]);
+import App from './App';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+// ==========================================================================================================
+// * Esse arquivo é o ponto de entrada da aplicação, geralmente são em poucas situações que se mexe nele
+// * Caso queira inserir mais algum Provider, insira no arquivo App.jsx
+// ==========================================================================================================
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <>
+    <App />
+  </>
 );
