@@ -22,6 +22,8 @@ const GlobalStyles = createGlobalStyle`
       font-family: ${theme?.font?.family};
       font-size: 62.5%;
       font-size: 1rem;
+      color: ${theme?.colors?.text};
+      background-color: ${theme.colors.white};
     }
   `}
 `;

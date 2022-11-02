@@ -2,7 +2,7 @@ import routes from './routes/index';
 import { RouterProvider } from 'react-router-dom';
 import GlobalStyles from './styles/global';
 import { ThemeProvider } from 'styled-components';
-import theme from './styles/theme';
+import { theme } from './styles/theme';
 
 // ========================================================================
 // * É através do ThemeProvider que todo e qualquer componente / template terá acesso à folha de estilização definida pelo designer

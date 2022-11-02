@@ -1,4 +1,5 @@
 export const theme = {
+  name: 'theme',
   font: {
     family: 'Montserrat, sans-serif',
     family02: 'Raleway, sans-serif',
@@ -28,6 +29,23 @@ export const theme = {
       xhuge: '4.2rem',
       xxhuge: '5.0rem',
       xxxhuge: '5.6rem',
+    },
+  },
+  height: {
+    sizes: {
+      smaller: '1.3125rem',
+      xsmall: '5.3rem',
+      small: '5.6rem',
+      medium: '6.1rem',
+    },
+  },
+  width: {
+    sizes: {
+      smaller: '12.1875rem',
+      small: '13.4375rem',
+      medium: '23.5rem',
+      xmedium: '25.4rem',
+      large: '29rem',
     },
   },
   colors: {

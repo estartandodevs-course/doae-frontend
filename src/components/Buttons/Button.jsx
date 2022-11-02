@@ -1,32 +1,10 @@
-import { StyledButton, ButtonIcon } from './Button.styles';
+import * as S from './styles';
 
-export const Button = ({ type, variant, className, id, onClick, size, children }) => {
-  return (
-    <StyledButton
-      type={type ? type : 'button'}
-      variant={variant}
-      className={className ? `btn-component ${className}` : 'btn-component'}
-      id={id}
-      onClick={onClick}
-      size={size}
-    >
-      {children}
-    </StyledButton>
-  );
-};
+const Button = ({ children, icon, url, disabled, ...props }) => (
+  <S.Wrapper hasIcon={!!icon} disabled={disabled} url={url} {...props}>
+    {icon}
+    {!!children && children}
+  </S.Wrapper>
+);
 
-export const ButtonImg = ({ type, variant, className, id, onClick, size, url, children }) => {
-  return (
-    <ButtonIcon
-      type={type ? type : 'button'}
-      variant={variant}
-      className={className ? `btn-component ${className}` : 'btn-component'}
-      id={id}
-      onClick={onClick}
-      size={size}
-      url={url}
-    >
-      {children}
-    </ButtonIcon>
-  );
-};
+export default Button;
