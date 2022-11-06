@@ -1,10 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.div`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.white};
-  `}
-`;
+export const Wrapper = styled.div``;
 
 export const Title = styled.h1`
   ${({ theme }) => css`

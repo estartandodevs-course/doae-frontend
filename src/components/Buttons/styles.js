@@ -1,12 +1,13 @@
 import styled, { css } from 'styled-components';
 
-export const Button = styled.button`
+export const Buttons = styled.button`
   ${({ theme }) => css`
-    display: flex;
+    display: ${({ type }) => (type ? 'flex' : 'none')};
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     text-decoration: none;
     cursor: pointer;
+    grid-gap: 0.8rem;
     border-radius: 0.4rem;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -28,41 +29,17 @@ export const Button = styled.button`
       opacity: 0.7;
       transition: background-color 0.4s ease-in-out;
     }
-  `}
-  ${({ purple, theme }) =>
-    purple &&
-    css`
+    &.purple {
       background-color: ${theme.colors.primary04};
       height: ${theme.height.sizes.medium};
       width: ${theme.width.sizes.medium};
-    `}
-    ${({ icon, theme }) =>
-    icon &&
-    css`
-      display: flex;
-      flex-direction: row;
-      gap: 0.2rem;
-      background-color: ${theme.colors.primary01};
-      height: ${theme.height.sizes.xsmall};
-      width: ${theme.width.sizes.medium};
-
-      &::before {
-        padding-top: 0.1rem;
-        content: url(${({ url }) => url});
-        width: ${theme.font.sizes.xmedium};
-        height: ${theme.font.sizes.xmedium};
-      }
-    `}
-    ${({ pink, theme }) =>
-    pink &&
-    css`
+    }
+    &.pink {
       background-color: ${theme.colors.primary01};
       height: ${theme.height.sizes.medium};
       width: ${theme.width.sizes.medium};
-    `}
-    ${({ secondary, theme }) =>
-    secondary &&
-    css`
+    }
+    &.secondary {
       color: ${theme.colors.primary04};
       background-color: ${theme.colors.white};
       border: 0.2rem solid #852baf;
@@ -73,10 +50,8 @@ export const Button = styled.button`
         opacity: none;
         transition: none;
       }
-    `}
-    ${({ disable, theme }) =>
-    disable &&
-    css`
+    }
+    &.disable {
       background-color: #e3e3e3;
       text-shadow: none;
       box-shadow: none;
@@ -88,6 +63,26 @@ export const Button = styled.button`
       &:hover {
         opacity: none;
         transition: none;
+      }
+    }
+    }
+  `}
+`;
+
+export const Icon = styled.img`
+  ${({ icon, theme }) =>
+    icon &&
+    css`
+      background-color: ${theme.colors.primary01};
+      height: ${theme.height.sizes.xsmall};
+      width: ${theme.width.sizes.medium};
+
+      &::before {
+        display: ${({ src }) => (src ? 'flex' : 'none')};
+        align-items: center
+        content: url(${({ url }) => url});
+        width: ${theme.font.sizes.xmedium};
+        height: ${theme.font.sizes.xmedium};
       }
     `}
 `;

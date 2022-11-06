@@ -17,13 +17,14 @@ const GlobalStyles = createGlobalStyle`
   ${({ theme }) => css`
     html,
     body {
-      max-width: 100%;
+      max-width: 100vw;
+      max-height: 100vh;
       scroll-behavior: smooth;
       font-family: ${theme?.font?.family};
       font-size: 62.5%;
       font-size: 1rem;
       color: ${theme?.colors?.text};
-      background-color: ${theme.colors.white};
+      background-color: #f5f5f5;
     }
   `}
 `;

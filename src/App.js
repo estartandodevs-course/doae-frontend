@@ -3,8 +3,6 @@ import { RouterProvider } from 'react-router-dom';
 import GlobalStyles from './styles/global';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme';
-import { Provider } from 'react-redux';
-import { store } from './store';
 
 // ========================================================================
 // * É através do ThemeProvider que todo e qualquer componente / template terá acesso à folha de estilização definida pelo designer
@@ -16,12 +14,10 @@ import { store } from './store';
 
 const App = () => {
   return (
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <RouterProvider router={routes} />
-      </ThemeProvider>
-    </Provider>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <RouterProvider router={routes} />
+    </ThemeProvider>
   );
 };
 
