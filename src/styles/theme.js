@@ -37,6 +37,7 @@ export const theme = {
       xsmall: '5.3rem',
       small: '5.6rem',
       medium: '6.1rem',
+      large: '14.2rem',
     },
   },
   width: {
@@ -46,6 +47,7 @@ export const theme = {
       medium: '23.5rem',
       xmedium: '25.4rem',
       large: '29rem',
+      xlarge: '32rem',
     },
   },
   colors: {

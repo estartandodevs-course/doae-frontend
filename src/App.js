@@ -5,7 +5,6 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme';
 import { Provider } from 'react-redux';
 import { store } from './store';
-
 // ========================================================================
 // * É através do ThemeProvider que todo e qualquer componente / template terá acesso à folha de estilização definida pelo designer
 // * O GlobalStyles é um componente que renderiza as fontes e outras configurações globais

@@ -1,17 +1,23 @@
-import { Button } from '../components/Buttons/styles';
+import { Button } from '../components/Buttons/';
+import { Cards } from '../components/Cards';
 import TemplateHomePage from '../templates/HomePage/';
+/* import CameraIcon from '../assets/icons/cameraIcon.png'; */
+import MapIconG from '../assets/icons/localGreenIcon.png';
+import Lar from '../assets/images/LarMocas.png';
 
 const HomePage = () => {
   return (
     <>
       <TemplateHomePage />
-      <Button icon url={'./icons/cameraIcon.png'}>
-        BOTÃO PRIMÁRIO
-      </Button>
-      <Button purple>Primário</Button>
-      <Button pink>Primário</Button>
-      <Button secondary>Secundário</Button>
-      <Button disable>Desabilitado</Button>
+      <Button text="Cadastrar" type="purple"></Button>
+      <Cards
+        img={Lar}
+        title="Lar das Moças Cegas"
+        icn={MapIconG}
+        local="Gonzaga, Santos/SP"
+        text="Ver Mais"
+        type="pink"
+      ></Cards>
     </>
   );
 };
