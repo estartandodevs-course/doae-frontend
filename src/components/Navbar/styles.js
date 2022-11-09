@@ -3,8 +3,10 @@ import { NavLink as BaseNavLink } from 'react-router-dom';
 
 export const Wrapper = styled.nav`
   ${({ theme }) => css`
-    height: 100%;
-    width: 37.5rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
     padding: 0.5rem;
     box-sizing: border-box;
     background-color: ${theme.colors.white};
