@@ -1,7 +1,12 @@
 import React from 'react';
+import Donations from '../templates/Donations';
 
 const Donation = () => {
-  return <div>Donation</div>;
+  return (
+    <>
+      <Donations />
+    </>
+  );
 };
 
 export default Donation;
