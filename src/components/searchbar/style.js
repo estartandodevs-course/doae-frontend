@@ -6,7 +6,7 @@ export const FormStyle = styled.form`
   align-items: center;
   justify-items: center;
   justify-content: space-evenly;
-  width: 37.5rem;
+  width: 100%;
   height: 7.2rem;
   background: ${theme.colors.primary01};
   box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
