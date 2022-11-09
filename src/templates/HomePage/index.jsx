@@ -3,13 +3,18 @@ import Searchbar from '../../components/Searchbar';
 import { Cards } from '../../components/Cards';
 import { Collection } from '../../components/Collection';
 import { useGetInstitutionsQuery } from '../../store/institution/institution.service';
+import { useGetDonationsSumQuery } from '../../store/donation/donation.service';
+import { formatCurrency } from '../../utils/currency';
 
 const HomePage = () => {
   const { data } = useGetInstitutionsQuery();
+  const { data: sum } = useGetDonationsSumQuery(0, {
+    pollingInterval: 10000,
+  });
   return (
     <S.Wrapper>
       <Searchbar placeholder={'Pesquisar'} />
-      <Collection title={'Arrecadação em tempo real'} amount={'R$ 12.000.174,21'} />
+      <Collection title={'Arrecadação em tempo real'} amount={formatCurrency(sum)} />
       {data?.map(institution => (
         <Cards
           key={institution.id}
