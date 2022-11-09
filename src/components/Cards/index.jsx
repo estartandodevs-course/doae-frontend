@@ -1,6 +1,7 @@
 import * as S from './styles';
+import MapIconG from '../../assets/icons/localGreenIcon.png';
 
-export const Cards = ({ img, icn, id, title, text, type, local, tel, className }) => {
+export const Cards = ({ img, id, title, type, local, tel, className }) => {
   return (
     <S.Wrapper>
       <S.WrapperC>
@@ -9,10 +10,10 @@ export const Cards = ({ img, icn, id, title, text, type, local, tel, className }
           <S.Title id={id} className={type}>
             {!!title && title}
           </S.Title>
-          <S.CardButton text={text} type={type} className={className}></S.CardButton>
+          <S.CardButton text="Ver Perfil" type={type} className={className}></S.CardButton>
           <S.WLocal>
             <S.Local className={type}>
-              <S.Icn id={id} className={type} src={!!icn && icn}></S.Icn>
+              <S.Icn id={id} className={type} src={MapIconG}></S.Icn>
               {!!local && local}
             </S.Local>
             <S.Tel className={type ? { type } : 'none'}>{!!tel && tel}</S.Tel>

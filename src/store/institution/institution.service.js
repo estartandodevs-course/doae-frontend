@@ -7,6 +7,11 @@ export const institutionApi = createApi({
   endpoints: builder => ({
     getInstitutions: builder.query({
       query: () => `institution`,
+      transformResponse: data =>
+        data?.map(institution => ({
+          ...institution,
+          address: `${institution.rua}, ${institution.cidade}/${institution.estado} `,
+        })),
     }),
     getInstitution: builder.query({
       query: id => `institution/${id}`,

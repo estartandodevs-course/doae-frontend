@@ -2,46 +2,25 @@ import * as S from './styles';
 import Searchbar from '../../components/Searchbar';
 import { Cards } from '../../components/Cards';
 import { Collection } from '../../components/Collection';
-import MapIconG from '../../assets/icons/localGreenIcon.png';
-import Lar from '../../assets/images/LarMocas.png';
+import { useGetInstitutionsQuery } from '../../store/institution/institution.service';
 
-const HomePage = () => (
-  <S.Wrapper>
-    <Searchbar placeholder={'Pesquisar'} />
-    <Collection title={'Arrecadação em tempo real'} amount={'R$ 12.000.174,21'} />
-    <Cards
-      img={Lar}
-      icn={MapIconG}
-      text={'Ver perfil'}
-      title={'Lar das Moças Cegas'}
-      local={'Gonzaga, Santos/SP'}
-      type={'purple'}
-    />
-    <Cards
-      img={Lar}
-      icn={MapIconG}
-      text={'Ver perfil'}
-      title={'Lar das Moças Cegas'}
-      local={'Gonzaga, Santos/SP'}
-      type={'purple'}
-    />
-    <Cards
-      img={Lar}
-      icn={MapIconG}
-      text={'Ver perfil'}
-      title={'Lar das Moças Cegas'}
-      local={'Gonzaga, Santos/SP'}
-      type={'purple'}
-    />
-    <Cards
-      img={Lar}
-      icn={MapIconG}
-      text={'Ver perfil'}
-      title={'Lar das Moças Cegas'}
-      local={'Gonzaga, Santos/SP'}
-      type={'purple'}
-    />
-  </S.Wrapper>
-);
+const HomePage = () => {
+  const { data } = useGetInstitutionsQuery();
+  return (
+    <S.Wrapper>
+      <Searchbar placeholder={'Pesquisar'} />
+      <Collection title={'Arrecadação em tempo real'} amount={'R$ 12.000.174,21'} />
+      {data?.map(institution => (
+        <Cards
+          key={institution.id}
+          img={institution.logo}
+          title={institution.name}
+          local={institution.address}
+          type={'purple'}
+        />
+      ))}
+    </S.Wrapper>
+  );
+};
 
 export default HomePage;
