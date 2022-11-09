@@ -1,14 +1,9 @@
 import * as S from './styles';
 import ProgressBar from './progressbar';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { formatCurrency } from '../../utils/currency';
 
-const DonationsAmount = ({ type, text, className, quantiInic, quantiFim, meta, titulo }) => {
-  const [completed, setCompleted] = useState(0);
-
-  useEffect(() => {
-    setInterval(() => setCompleted(Math.floor(Math.random() * 100) + 1), 2000);
-  }, []);
-
+const DonationsAmount = ({ type, className, completed, quantiFim, meta, titulo }) => {
   return (
     <S.Wrapper>
       <S.Top>
@@ -16,7 +11,7 @@ const DonationsAmount = ({ type, text, className, quantiInic, quantiFim, meta, t
           <S.Info>
             <h1>{!!titulo && titulo}</h1>
             <h2>{!!meta && meta} </h2>
-            <h3>{!!quantiFim && quantiFim}</h3>
+            <h3>{formatCurrency(quantiFim)}</h3>
           </S.Info>
           <S.Percent>
             <ProgressBar bgcolor={'#FEC32B'} completed={completed} />
@@ -27,10 +22,10 @@ const DonationsAmount = ({ type, text, className, quantiInic, quantiFim, meta, t
         <S.BText>
           <S.Text>
             <S.InfoB>
-              <p>{!!quantiInic && quantiInic}</p>
-              <p>{!!quantiFim && quantiFim}</p>
+              <p>R$ 0,00</p>
+              <p>{formatCurrency(quantiFim)}</p>
             </S.InfoB>
-            <S.DonButton text={text} type={type} className={className}></S.DonButton>
+            <S.DonButton text="CONTRIBUIR" type={type} className={className}></S.DonButton>
           </S.Text>
         </S.BText>
       </S.Bottom>
