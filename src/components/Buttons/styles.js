@@ -20,7 +20,6 @@ export const Buttons = styled.button`
     color: ${theme.colors.white};
     font-family: ${theme.font.family};
     font-weight: ${theme.font.bold};
-    font-size: ${theme.font.sizes.small};
     line-height: 105%;
     &:focus-within {
       outline: none;
@@ -31,8 +30,8 @@ export const Buttons = styled.button`
     }
     &.purple {
       background-color: ${theme.colors.primary04};
-      height: ${theme.height.sizes.medium};
-      width: ${theme.width.sizes.medium};
+      height: 3.8rem;
+      width: 17.8rem;
     }
     &.pink {
       background-color: ${theme.colors.primary01};

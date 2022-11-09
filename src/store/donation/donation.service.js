@@ -11,6 +11,9 @@ export const donationApi = createApi({
     getDonationsByTarget: builder.query({
       query: id => `donation/meta/${id}`,
     }),
+    getDonationsSum: builder.query({
+      query: () => `donation/sum`,
+    }),
     createDonation: builder.mutation({
       query: data => ({
         url: `donation`,
@@ -35,6 +38,7 @@ export const donationApi = createApi({
 });
 
 export const {
+  useGetDonationsSumQuery,
   useCreateDonationMutation,
   useDeleteDonationMutation,
   useGetDonationsByInstitutionQuery,
