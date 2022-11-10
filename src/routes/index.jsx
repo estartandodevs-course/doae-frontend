@@ -9,6 +9,8 @@ import Login from '../pages/login';
 import Donation from '../pages/donation';
 import Local from '../pages/local';
 import ProfileInstitution from '../pages/profile';
+import TargetsAndProducts from '../pages/target';
+import ItemsInstitution from '../pages/items';
 
 // ========================================================================
 // * Adicione essa página no array de rotas para que ela seja renderizada
@@ -43,6 +45,14 @@ const routes = createBrowserRouter([
       {
         path: '/perfil',
         element: <ProfileInstitution />,
+      },
+      {
+        path: '/metas',
+        element: <TargetsAndProducts />,
+      },
+      {
+        path: '/items',
+        element: <ItemsInstitution />,
       },
     ],
   },
