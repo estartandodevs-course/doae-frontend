@@ -8,6 +8,7 @@ import HomePage from '../pages/index';
 import Login from '../pages/login';
 import Donation from '../pages/donation';
 import Local from '../pages/local';
+import ProfileInstitution from '../pages/profile';
 
 // ========================================================================
 // * Adicione essa página no array de rotas para que ela seja renderizada
@@ -38,6 +39,10 @@ const routes = createBrowserRouter([
       {
         path: '/localizar',
         element: <Local />,
+      },
+      {
+        path: '/perfil',
+        element: <ProfileInstitution />,
       },
     ],
   },
