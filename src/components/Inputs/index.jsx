@@ -1,6 +1,6 @@
 import { Input, Label } from './style';
 
-export const Inputs = ({ type, variant, className, id, size, placeholder }) => {
+export const Inputs = ({ type, variant, className, id, size, placeholder, width }) => {
   return (
     <Label>
       <Input
@@ -10,6 +10,7 @@ export const Inputs = ({ type, variant, className, id, size, placeholder }) => {
         size={size}
         placeholder={placeholder}
         type={type ? type : 'text'}
+        w={width}
       />
     </Label>
   );

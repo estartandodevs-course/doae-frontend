@@ -8,11 +8,11 @@ export const Label = styled.label`
   margin: 0;
   list-style: none;
   position: relative;
+  width: 100%;
 `;
 
 export const Input = styled.input`
-  margin: 5px;
-  width: ${props => (props.variant === 'error' ? '280px' : '235px')};
+  width: ${props => props.w};
   height: 56px;
   background-color: #ffffff;
   border: ${props => (props.variant === 'error' ? '2px solid #CA2337' : '2px solid #b7bfc6')};
@@ -21,11 +21,16 @@ export const Input = styled.input`
   text-align: ${props => (props.variant === 'error' ? 'center' : 'none')};
   font-weight: 500;
   font-size: ${props => (props.variant === 'error' ? '12px' : '16px')};
-  line-height: 115%;
   color: #616d78;
+  padding: 10px;
+  font-family: Montserrat;
+  line-height: 16px;
+  letter-spacing: 0em;
+  margin: 8px 0;
 
   &::placeholder {
     color: ${props => (props.variant === 'error' ? '#CA2337' : '#616d78')};
+    font-size: 12px;
   }
 
   &:focus {

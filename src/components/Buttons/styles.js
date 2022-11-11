@@ -36,12 +36,17 @@ export const Buttons = styled.button`
     &.purple2 {
       background-color: ${theme.colors.primary04};
       height: ${theme.height.sizes.medium};
-      width: ${theme.width.sizes.medium};
+      width: 100%;
     }
     &.pink {
       background-color: ${theme.colors.primary01};
       height: ${theme.height.sizes.medium};
       width: ${theme.width.sizes.medium};
+    }
+    &.pink2 {
+      background-color: ${theme.colors.primary01};
+      height: ${theme.height.sizes.medium};
+      width: 100%;
     }
     &.secondary {
       color: ${theme.colors.primary04};

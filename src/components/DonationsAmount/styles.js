@@ -33,8 +33,9 @@ export const Bottom = styled.div`
 `;
 
 export const Text = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   padding: 0px;
   gap: 8px;
@@ -43,8 +44,8 @@ export const Text = styled.div`
 `;
 
 export const Info = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
 
   h1 {
     font-family: 'Montserrat';
@@ -79,17 +80,19 @@ export const Info = styled.div`
 `;
 
 export const InfoB = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   padding: 5px;
   margin: 0;
   text-align: none;
   align-items: flex-end;
   font-size: 12px;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 279px;
 `;
 
-export const Percent = styled.div``;
+export const Percent = styled.div`
+  width: 279px;
+`;
 
 export const BText = styled.div``;
 

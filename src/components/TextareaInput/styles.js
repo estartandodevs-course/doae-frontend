@@ -1,26 +1,7 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 500px;
-  font-size: 16px;
-`;
-
-export const Title = styled.p`
-  font-weight: 800;
-  font-size: 18px;
-  text-transform: uppercase;
-  line-height: 23px;
-  text-align: center;
-  color: #cd2078ff;
-  height: 5%;
-`;
-
 export const Description = styled.textarea`
+  align-self: center;
   width: 100%;
   min-height: 250px;
   background-color: #ffffff;
@@ -46,13 +27,4 @@ export const Description = styled.textarea`
     -webkit-transition: border 0.2s ease;
     transition: border 0.2s ease;
   }
-`;
-
-export const AreaButtonWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 30%;
-  align-items: center;
-  justify-content: space-between;
 `;
