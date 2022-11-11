@@ -5,6 +5,13 @@ import { Collection } from '../../components/Collection';
 import { useGetInstitutionsQuery } from '../../store/institution/institution.service';
 import { useGetDonationsSumQuery } from '../../store/donation/donation.service';
 import { formatCurrency } from '../../utils/currency';
+import { showModal } from '../../components/ModalWrapping';
+
+const ContentModal = () => (
+  <>
+    <h2>Modal</h2>
+  </>
+);
 
 const HomePage = () => {
   const { data } = useGetInstitutionsQuery();
@@ -14,6 +21,7 @@ const HomePage = () => {
   return (
     <S.Wrapper>
       <Searchbar placeholder={'Pesquisar'} />
+      <button onClick={() => showModal(<ContentModal />)}>Abrir modal</button>
       <Collection title={'Arrecadação em tempo real'} amount={formatCurrency(sum)} />
       {data?.map(institution => (
         <Cards
