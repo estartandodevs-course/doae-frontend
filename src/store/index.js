@@ -1,5 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
+import { authApi } from './auth/auth.service';
+import { authSlice } from './auth/auth.slice';
 
 import { donationApi } from './donation/donation.service';
 import { institutionApi } from './institution/institution.service';
@@ -14,6 +16,8 @@ export const store = configureStore({
     [productApi.reducerPath]: productApi.reducer,
     [publicationApi.reducerPath]: publicationApi.reducer,
     [targetApi.reducerPath]: targetApi.reducer,
+    [authApi.reducerPath]: authApi.reducer,
+    [authSlice.name]: authSlice.reducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware()
@@ -21,7 +25,8 @@ export const store = configureStore({
       .concat(institutionApi.middleware)
       .concat(productApi.middleware)
       .concat(publicationApi.middleware)
-      .concat(targetApi.middleware),
+      .concat(targetApi.middleware)
+      .concat(authApi.middleware),
 });
 
 setupListeners(store.dispatch);
