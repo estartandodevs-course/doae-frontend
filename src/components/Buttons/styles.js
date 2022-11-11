@@ -33,6 +33,11 @@ export const Buttons = styled.button`
       height: 3.8rem;
       width: 17.8rem;
     }
+    &.purple2 {
+      background-color: ${theme.colors.primary04};
+      height: ${theme.height.sizes.medium};
+      width: ${theme.width.sizes.medium};
+    }
     &.pink {
       background-color: ${theme.colors.primary01};
       height: ${theme.height.sizes.medium};

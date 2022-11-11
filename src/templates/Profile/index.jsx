@@ -4,6 +4,9 @@ import { ProfileCard } from '../../components/ProfileCard';
 import { CollectedBar } from '../../components/CollectedBar';
 import { Config } from '../../components/Config';
 import { ButtonAddPost } from '../../components/ButtonAddPost';
+import { showModal } from '../../components/ModalWrapping';
+import { NewPublishModal } from '../../components/NewPublishModal';
+//import { Popup } from '../../components/Popup';
 
 const Profile = () => {
   return (
@@ -23,7 +26,7 @@ const Profile = () => {
         time="23:10"
         text="Ocorreu nesse final de semana dos dias 24 e 25 de setembro a ação da primavera! Alguns dos nossos voluntários também fizeram as entregas para moradores de rua da região."
       />
-      <ButtonAddPost />
+      <ButtonAddPost eventButton={() => showModal(<NewPublishModal />)} />
     </S.Wrapper>
   );
 };

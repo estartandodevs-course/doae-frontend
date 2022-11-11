@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { closeModal, showModal } from './actions';
+import BackIcon from '../../assets/svg/backbutton.svg';
 import * as S from './styles';
 
 function ModalWrapping() {
@@ -33,7 +34,7 @@ function ModalWrapping() {
           onClick={() => handleCloseModal()}
           sx={{ position: 'absolute', right: '32px', top: '32px' }}
         >
-          &#10006;
+          <S.IconModal src={BackIcon} />
         </S.ButtonCloseWrapper>
         {contentModal?.component}
       </S.ContentModalWrapper>

@@ -20,6 +20,14 @@ export const ButtonWrapper = styled.div`
   top: calc(100vh - 15rem);
 `;
 
+export const Button = styled.button`
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+`;
+
 export const ImgButton = styled.img`
   width: 7rem;
   height: 7rem;
