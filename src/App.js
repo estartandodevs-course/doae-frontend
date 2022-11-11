@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme';
 import { Provider } from 'react-redux';
 import { store } from './store';
+import { ModalWrapping } from './components/ModalWrapping';
 // ========================================================================
 // * É através do ThemeProvider que todo e qualquer componente / template terá acesso à folha de estilização definida pelo designer
 // * O GlobalStyles é um componente que renderiza as fontes e outras configurações globais
@@ -17,6 +18,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
+        <ModalWrapping />
         <GlobalStyles />
         <RouterProvider router={routes} />
       </ThemeProvider>
