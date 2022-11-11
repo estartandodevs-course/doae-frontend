@@ -65,13 +65,13 @@ export const Subtitle = styled.p`
 `;
 
 export const Icon = styled.img`
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 0.5rem;
 `;
 
 export const IconLocal = styled.img`
-    width: 1.5rem;
-    height: 1.6rem;
-    margin: 0 0.5rem;
+  width: 1.5rem;
+  height: 1.6rem;
+  margin: 0 0.5rem;
 `;

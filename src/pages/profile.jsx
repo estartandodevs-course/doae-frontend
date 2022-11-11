@@ -1,5 +1,5 @@
 import React from 'react';
-import Profile from "../templates/Profile";
+import Profile from '../templates/Profile';
 
 const ProfileInstitution = () => {
   return (

@@ -46,34 +46,34 @@ export const Subtitle = styled.p`
 `;
 
 export const BarProgress = styled.div`
-    width: 26rem;
-    height: 4rem;
-    background-color: rgb(205, 32, 120);
-    margin: 0.5rem auto;
-    border-radius: 0.4rem;
+  width: 26rem;
+  height: 4rem;
+  background-color: rgb(205, 32, 120);
+  margin: 0.5rem auto;
+  border-radius: 0.4rem;
 `;
 
 export const CompletedBar = styled.div`
-    height: 4rem;
-    width: 22rem;
-    background-color: rgb(170, 201, 69);
-    border-radius: 0.4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center
+  height: 4rem;
+  width: 22rem;
+  background-color: rgb(170, 201, 69);
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const DescriptionRaised = styled.p`
-    font-size: 14px;
-    font-weight: 700;
-    text-align: center;
-    color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
 `;
 
 export const Subdescription = styled.p`
-    font-size: 9px;
-    font-weight: 200;
-    font-style: italic;
-    text-align: center;
-    color: #fff;
+  font-size: 9px;
+  font-weight: 200;
+  font-style: italic;
+  text-align: center;
+  color: #fff;
 `;

@@ -21,15 +21,15 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const ImgButton = styled.img`
-    width: 7rem;
-    height: 7rem;
-    border-radius: 50%;
-    position: fixed;
-    z-index: 2;
-    left: 25.5rem;
-    top: calc(100vh - 15rem);
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 2;
+  left: 25.5rem;
+  top: calc(100vh - 15rem);
 
-    &:hover {
-        filter: brightness(.9);
-    }
+  &:hover {
+    filter: brightness(0.9);
+  }
 `;

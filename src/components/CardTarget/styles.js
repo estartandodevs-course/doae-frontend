@@ -26,65 +26,65 @@ export const WrapperC = styled.div`
 `;
 
 export const EditOptions = styled.div`
-    width: 28rem;
-    display: flex;
-    align-item: center;
-    justify-content: flex-end;
+  width: 28rem;
+  display: flex;
+  align-item: center;
+  justify-content: flex-end;
 `;
 
 export const Icon = styled.img`
-    width: 1.7rem;
-    height: 1.5rem;
-    margin: 0 0.5rem;
+  width: 1.7rem;
+  height: 1.5rem;
+  margin: 0 0.5rem;
 `;
 
 export const InfoWrapper = styled.div`
-    width: 28rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 28rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const InfoTitle = styled.p`
-    font-style: italic;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
-    align-items: center;
-    color: #b7bfc6;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  align-items: center;
+  color: #b7bfc6;
 `;
 
 export const InfoSubtitle = styled.p`
-    font-style: normal;
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 115%;
-    align-items: center;
-    color: rgb(205, 32, 120);
-    text-transform: uppercase;
-    margin: 0.5rem 0;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 115%;
+  align-items: center;
+  color: rgb(205, 32, 120);
+  text-transform: uppercase;
+  margin: 0.5rem 0;
 `;
 
 export const InfoRaised = styled.p`
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: center;
-    color: rgb(97, 109, 120);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: rgb(97, 109, 120);
 `;
 
 export const LabelInfoProgress = styled.div`
-    width: 28rem;
-    display: flex;
-    justify-content: space-between;
+  width: 28rem;
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const InfoProgress = styled.p`
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
-    align-items: center;
-    color: #b7bfc6;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  align-items: center;
+  color: #b7bfc6;
 `;
