@@ -6,7 +6,6 @@ import { Config } from '../../components/Config';
 import { ButtonAddPost } from '../../components/ButtonAddPost';
 import { showModal } from '../../components/ModalWrapping';
 import { NewPublishModal } from '../../components/NewPublishModal';
-//import { Popup } from '../../components/Popup';
 
 const Profile = () => {
   return (

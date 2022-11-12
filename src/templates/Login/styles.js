@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
 
 export const Logo = styled.img`
   width: 40%;
+  height: 40vh;
   margin-top: 0;
   margin-bottom: ${props => props.mb};
 `;

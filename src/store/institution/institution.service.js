@@ -5,6 +5,16 @@ export const institutionApi = createApi({
   reducerPath: 'institutionApi',
   baseQuery: fetchBaseQuery({ baseUrl: constants.BASE_URL_API }),
   endpoints: builder => ({
+    createLogin: builder.mutation({
+      query: payload => ({
+        url: '/login/auth/',
+        method: 'POST',
+        body: payload,
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      }),
+    }),
     getInstitutions: builder.query({
       query: () => `institution`,
       transformResponse: data =>
@@ -45,4 +55,5 @@ export const {
   useGetInstitutionQuery,
   useGetInstitutionsQuery,
   useUpdateInstitutionMutation,
+  useCreateLoginMutation,
 } = institutionApi;
