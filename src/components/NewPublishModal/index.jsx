@@ -15,7 +15,7 @@ export const NewPublishModal = () => {
         <Button
           text={'Publicar'}
           isDisabled={false}
-          type={'purple2'}
+          type={'purple3'}
           eventButton={() => {
             showModal(<Popup text="Publicação Realizada!" />);
           }}

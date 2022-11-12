@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink as BaseNavLink } from 'react-router-dom';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -10,21 +11,38 @@ export const Wrapper = styled.div`
   margin-bottom: 2.5rem;
 `;
 
-export const ButtonWrapper = styled.div`
+export const ButtonWrapper = styled(BaseNavLink)`
   width: 50%;
   height: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1rem solid ${props => (props.active ? 'rgb(205, 32, 120)' : 'rgb(183, 191, 198)')};
+  border-bottom: 1rem solid rgb(183, 191, 198);
   transition: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover,
+  &.active {
+    border-bottom: 1rem solid rgb(205, 32, 120);
+  }
+
+  &:hover p {
+    color: rgb(205, 32, 120) !important;
+  }
 `;
 
 export const Text = styled.p`
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
+  text-decoration: none;
   text-align: center;
-  color: ${props => (props.active ? 'rgb(205, 32, 120)' : 'rgb(183, 191, 198)')};
+  color: rgb(183, 191, 198);
   transition: 0.4s;
+  cursor: pointer;
+  &:hover,
+  &.active {
+    color: rgb(205, 32, 120);
+  }
 `;

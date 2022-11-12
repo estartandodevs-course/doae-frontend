@@ -4,8 +4,8 @@ export const Wrapper = styled.div`
   display: grid;
   justify-content: center;
   align-items: center;
-  width: 30rem;
-  height: 30rem;
+  width: 80%;
+  height: auto;
   margin: 1rem auto;
 `;
 
@@ -14,9 +14,9 @@ export const WrapperC = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 30rem;
-    height: 30rem;
-    padding: 1.6rem;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
     background-color: ${theme.colors.white};
     box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
     border-radius: 0.4rem;
@@ -26,7 +26,7 @@ export const WrapperC = styled.div`
 
 export const WrapperP = styled.div`
   display: flex;
-  width: 30rem;
+  width: 100%;
   margin: 0 auto;
 `;
 
@@ -37,8 +37,9 @@ export const WrapperT = styled.div`
 `;
 
 export const ImgWrapper = styled.div`
-  height: 13rem;
+  height: 60%;
   overflow: hidden;
+  position: relative;
 `;
 
 export const LogoWrapper = styled.div`
@@ -53,10 +54,15 @@ export const Descriprion = styled.p`
   font-weight: 500;
   font-style: italic;
   opacity: 0.8;
+
+  @media (min-width: 790px) {
+    font-size: 16px;
+  }
 `;
 
 export const Img = styled.img`
-  width: 30rem;
+  width: 100%;
+  height: auto;
 `;
 
 export const Title = styled.p`

@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 30rem;
-  height: 8rem;
+  width: 100%;
+  height: 20vh;
   margin: 1.5rem auto;
 `;
 
@@ -13,9 +13,9 @@ export const WrapperC = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    width: 30rem;
-    height: 8rem;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
     padding: 0.7rem;
     background-color: ${theme.colors.white};
     box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
@@ -35,6 +35,10 @@ export const Raised = styled.p`
   font-size: 14px;
   font-weight: 800;
   margin: 0 0.1rem;
+
+  @media (min-width: 790px) {
+    font-size: 22px;
+  }
 `;
 
 export const Subtitle = styled.p`
@@ -43,19 +47,23 @@ export const Subtitle = styled.p`
   font-style: italic;
   opacity: 0.5;
   text-align: center;
+
+  @media (min-width: 790px) {
+    font-size: 14px;
+  }
 `;
 
 export const BarProgress = styled.div`
-  width: 26rem;
-  height: 4rem;
+  width: 80%;
+  height: 40%;
   background-color: rgb(205, 32, 120);
   margin: 0.5rem auto;
   border-radius: 0.4rem;
 `;
 
 export const CompletedBar = styled.div`
-  height: 4rem;
-  width: 22rem;
+  height: 100%;
+  width: 80%;
   background-color: rgb(170, 201, 69);
   border-radius: 0.4rem;
   display: flex;
@@ -68,6 +76,10 @@ export const DescriptionRaised = styled.p`
   font-weight: 700;
   text-align: center;
   color: #fff;
+
+  @media (min-width: 790px) {
+    font-size: 22px;
+  }
 `;
 
 export const Subdescription = styled.p`
@@ -76,4 +88,8 @@ export const Subdescription = styled.p`
   font-style: italic;
   text-align: center;
   color: #fff;
+
+  @media (min-width: 790px) {
+    font-size: 16px;
+  }
 `;

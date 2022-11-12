@@ -24,9 +24,10 @@ export const WrapperC = styled.div`
   ${({ theme }) => css`
     display: flex;
     align-items: center;
+    flex-direction: column;
     width: 100%;
     max-width: 500px;
-    height: 14.2rem;
+    min-height: 230px;
     padding: 1.6rem;
     gap: 1.2rem;
     background-color: ${theme.colors.white};

@@ -3,7 +3,6 @@ import { createBrowserRouter, Outlet } from 'react-router-dom';
 // =====================================================
 // * Faça a importação da página que você criou
 // =====================================================
-import { Navbar } from '../components/Navbar';
 import HomePage from '../pages/index';
 import Login from '../pages/login';
 import Donation from '../pages/donation';
@@ -11,6 +10,7 @@ import Local from '../pages/local';
 import ProfileInstitution from '../pages/profile';
 import TargetsAndProducts from '../pages/target';
 import ItemsInstitution from '../pages/items';
+import Auth from '../templates/Login/Auth';
 
 // ========================================================================
 // * Adicione essa página no array de rotas para que ela seja renderizada
@@ -18,7 +18,6 @@ import ItemsInstitution from '../pages/items';
 const AppLayout = () => (
   <>
     <Outlet />
-    <Navbar flow={'giver'} />
   </>
 );
 
@@ -53,6 +52,10 @@ const routes = createBrowserRouter([
       {
         path: '/items',
         element: <ItemsInstitution />,
+      },
+      {
+        path: '/auth',
+        element: <Auth />,
       },
     ],
   },

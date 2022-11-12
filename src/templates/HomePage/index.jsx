@@ -6,7 +6,7 @@ import { useGetInstitutionsQuery } from '../../store/institution/institution.ser
 import { useGetDonationsSumQuery } from '../../store/donation/donation.service';
 import { formatCurrency } from '../../utils/currency';
 
-const HomePage = ({ isLoggin }) => {
+const HomePage = ({ isLoggin = true }) => {
   const { data } = useGetInstitutionsQuery();
   const { data: sum } = useGetDonationsSumQuery(0, {
     pollingInterval: 10000,

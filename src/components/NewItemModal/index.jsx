@@ -14,7 +14,7 @@ export const NewItemModal = () => {
       <Button
         text={'Concluir'}
         isDisabled={false}
-        type={'purple2'}
+        type={'purple3'}
         eventButton={() => {
           showModal(<Popup text="Item adicionado a sua lista de itens com sucesso!" />);
         }}

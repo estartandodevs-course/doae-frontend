@@ -38,6 +38,11 @@ export const Buttons = styled.button`
       height: 100%;
       width: 100%;
     }
+    &.purple3 {
+      background-color: ${theme.colors.primary04};
+      height: ${theme.height.sizes.medium};
+      width: 100%;
+    }
     &.pink {
       background-color: ${theme.colors.primary01};
       height: ${theme.height.sizes.medium};
