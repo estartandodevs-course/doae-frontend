@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { NavLink as BaseNavLink } from 'react-router-dom';
 
 export const FormStyle = styled.form`
   ${({ theme }) => css`
@@ -118,10 +119,11 @@ export const DataResult = styled.div`
   }
 `;
 
-export const ButtonLogin = styled.div`
+export const ButtonLogin = styled(BaseNavLink)`
   background-color: none;
   height: 3rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  cursor: pointer;
 `;

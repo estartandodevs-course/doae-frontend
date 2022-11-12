@@ -64,7 +64,7 @@ function SearchBar({ placeholder, data, isLoggin }) {
             {filteredData.length === 0 ? <SearchIcon /> : <CloseIcon id="clearBtn" onClick={clearInput} />}
           </S.IconStyle>
           {isLoggin ? (
-            <S.ButtonLogin>
+            <S.ButtonLogin to="/entrar">
               <Button text="entrar" isDisabled={false} type={'purple2'} />
             </S.ButtonLogin>
           ) : null}
