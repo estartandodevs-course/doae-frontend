@@ -1,6 +1,8 @@
 import * as S from './styles';
 import { Button } from '../Buttons';
+import { showModal } from '../../components/ModalWrapping';
 import { TextareInput } from '../TextareaInput';
+import { AddProduct } from './ModalAddProduct';
 
 export const NewTargetModal = () => {
   return (
@@ -28,11 +30,19 @@ export const NewTargetModal = () => {
       </S.InputWrapper>
       <S.InputWrapper type={'row'} margin={'0px'}>
         <S.LabelWrapper>
-          <S.Input type="checkbox" size={5} />
-          <S.Label>Não definir data de fim</S.Label>
+          <S.LabelCheckbox>
+            <S.Checkbox type="checkbox" />
+            <S.Subcheckbox />
+          </S.LabelCheckbox>
+          <S.Label>Não definir data de conclusão</S.Label>
         </S.LabelWrapper>
       </S.InputWrapper>
-      <Button text={'Selecionar itens'} isDisabled={false} type={'purple2'} />
+      <Button
+        text={'Selecionar itens'}
+        isDisabled={false}
+        type={'purple2'}
+        eventButton={() => showModal(<AddProduct />)}
+      />
     </S.Wrapper>
   );
 };

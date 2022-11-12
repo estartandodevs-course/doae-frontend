@@ -18,7 +18,7 @@ import ItemsInstitution from '../pages/items';
 const AppLayout = () => (
   <>
     <Outlet />
-    <Navbar />
+    <Navbar flow={'giver'} />
   </>
 );
 

@@ -2,21 +2,30 @@ import styled, { css } from 'styled-components';
 
 export const FormStyle = styled.form`
   ${({ theme }) => css`
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 7.2rem;
-  background: ${theme.colors.primary01};
-  box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
-}
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 7.2rem;
+    background: ${theme.colors.primary01};
+    box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  }
 `}
 `;
 
 export const SearchInputs = styled.div`
-  display: grid;
-  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
+
+export const SearchWrapper = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
 `;
 
 export const InputStyle = styled.input`
@@ -28,14 +37,12 @@ export const InputStyle = styled.input`
     font-size: 1.4rem;
     line-height: 1.7rem;
     padding-left: 3rem;
-    margin: 2rem 0;
     height: 3rem;
-    width: 34.3rem;
+    width: ${props => (props.isLoggin ? '80%' : '100%')};
     outline: none;
     color: ${theme.colors.neutral01};
 
     p {
-      margin: 1rem;
       font-size: 1.8rem;
     }
 
@@ -80,9 +87,11 @@ export const IconStyle = styled.div`
   text-decoration: none;
   outline: none;
   height: 2rem;
-  width: 2rem;
-  margin: 1.2rem 0.3rem;
+  width: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
+  margin: 2px;
 `;
 
 export const DataResult = styled.div`
@@ -107,4 +116,12 @@ export const DataResult = styled.div`
       color: black;
     }
   }
+`;
+
+export const ButtonLogin = styled.div`
+  background-color: none;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 `;

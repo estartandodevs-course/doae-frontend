@@ -10,7 +10,7 @@ export const institutionApi = createApi({
       transformResponse: data =>
         data?.map(institution => ({
           ...institution,
-          address: `${institution.rua}, ${institution.cidade}/${institution.estado} `,
+          address: `${institution.street}, ${institution.city}/${institution.state} `,
         })),
     }),
     getInstitution: builder.query({

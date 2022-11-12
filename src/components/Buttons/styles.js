@@ -35,7 +35,7 @@ export const Buttons = styled.button`
     }
     &.purple2 {
       background-color: ${theme.colors.primary04};
-      height: ${theme.height.sizes.medium};
+      height: 100%;
       width: 100%;
     }
     &.pink {
@@ -54,6 +54,19 @@ export const Buttons = styled.button`
       border: 0.2rem solid #852baf;
       height: ${theme.height.sizes.medium};
       width: ${theme.width.sizes.large};
+
+      &:hover {
+        opacity: none;
+        transition: none;
+      }
+    }
+    &.secondary2 {
+      color: ${theme.colors.primary04};
+      background-color: ${theme.colors.white};
+      border: 0.2rem solid #852baf;
+      height: ${theme.height.sizes.medium};
+      width: 100%;
+      font-weight: 900;
 
       &:hover {
         opacity: none;

@@ -2,6 +2,8 @@ import * as S from './styles';
 import { Button } from '../Buttons';
 import CamIcon from '../../assets/svg/cam.svg';
 import { TextareInput } from '../TextareaInput';
+import { showModal } from '../../components/ModalWrapping';
+import { Popup } from '../Popup';
 
 export const NewPublishModal = () => {
   return (
@@ -10,7 +12,14 @@ export const NewPublishModal = () => {
       <TextareInput placeholder={'Digite seu texto'} />
       <S.AreaButtonWrapper>
         <Button text={'Selecionar fotos'} icon={CamIcon} isDisabled={false} type={'pink2'} />
-        <Button text={'Publicar'} isDisabled={false} type={'purple2'} />
+        <Button
+          text={'Publicar'}
+          isDisabled={false}
+          type={'purple2'}
+          eventButton={() => {
+            showModal(<Popup text="Publicação Realizada!" />);
+          }}
+        />
       </S.AreaButtonWrapper>
     </S.Wrapper>
   );

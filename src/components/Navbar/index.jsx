@@ -4,7 +4,8 @@ import DonateIcon from '../../assets/icons/donationIcon.png';
 import LocalIcon from '../../assets/icons/localIcon.png';
 import { useResolvedPath, useMatch } from 'react-router-dom';
 
-export const Navbar = ({ type }) => {
+export const Navbar = ({ type, flow }) => {
+  if (!flow) return null;
   return (
     <S.Wrapper>
       <S.Nav>
