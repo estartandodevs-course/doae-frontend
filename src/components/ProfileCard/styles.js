@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 30rem;
-  height: 8rem;
+  width: 80%;
+  height: 20vh;
   margin: 1rem auto;
 `;
 
@@ -14,8 +14,8 @@ export const WrapperC = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 30rem;
-    height: 7rem;
+    width: 100%;
+    height: 100%;
     padding: 0.7rem;
     background-color: ${theme.colors.white};
     box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
@@ -25,22 +25,22 @@ export const WrapperC = styled.div`
 `;
 
 export const LogoWrapper = styled.div`
-  width: 7rem;
-  height: 6rem;
-  border-radius: 0.4rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   overflow: hidden;
 `;
 
 export const Logo = styled.img`
-  width: auto;
-  height: 6rem;
+  width: 170%;
+  height: auto;
 `;
 
 export const WrapperT = styled.div`
   display: flex;
   flex-direction: column;
-  width: 23rem;
-  height: 5rem;
+  width: 70%;
+  height: 80%;
   align-items: center;
   justify-content: space-around;
 `;
@@ -52,6 +52,10 @@ export const Title = styled.p`
   display: flex;
   align-items: center;
   text-align: center;
+
+  @media (min-width: 680px) {
+    font-size: 24px;
+  }
 `;
 
 export const Subtitle = styled.p`
@@ -62,6 +66,10 @@ export const Subtitle = styled.p`
   display: flex;
   align-items: center;
   text-align: center;
+
+  @media (min-width: 680px) {
+    font-size: 16px;
+  }
 `;
 
 export const Icon = styled.img`

@@ -1,14 +1,21 @@
 import * as S from './styles';
+import { useResolvedPath, useMatch } from 'react-router-dom';
 
-export const NavtopInstitution = ({ isTarget, isItem }) => {
+export const NavtopInstitution = () => {
   return (
     <S.Wrapper>
-      <S.ButtonWrapper active={isTarget}>
-        <S.Text active={isTarget}>Metas</S.Text>
-      </S.ButtonWrapper>
-      <S.ButtonWrapper active={isItem}>
-        <S.Text active={isItem}>Itens</S.Text>
-      </S.ButtonWrapper>
+      <CustomLink to="/metas">Metas</CustomLink>
+      <CustomLink to="/items">Itens</CustomLink>
     </S.Wrapper>
   );
 };
+
+function CustomLink({ to, children }) {
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+  return (
+    <S.ButtonWrapper to={to} className={isActive ? 'active' : ''}>
+      <S.Text className={isActive ? 'active' : ''}>{children}</S.Text>
+    </S.ButtonWrapper>
+  );
+}

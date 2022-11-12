@@ -18,13 +18,15 @@ export const Nav = styled.ul`
   align-items: center;
   list-style-type: none;
   padding: 0;
-  width: 37.2rem;
+  width: 100%;
   height: 5.6rem;
   padding: 0.2rem;
   box-sizing: border-box;
 `;
 export const NavItem = styled.li`
+  display: flex;
   align-items: center;
+  justify-content: space-around;
   padding: 0;
   width: 100%;
   height: 100%;

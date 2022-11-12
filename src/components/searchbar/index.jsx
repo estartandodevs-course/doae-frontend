@@ -2,8 +2,9 @@ import * as S from './style';
 import { useState } from 'react';
 import magnifierIcon from '../../assets/icons/magnifierIcon.png';
 import closeIcon from '../../assets/icons/closeIcon.png';
+import { Button } from '../../components/Buttons';
 
-function SearchBar({ placeholder, data }) {
+function SearchBar({ placeholder, data, isLoggin }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState('');
 
@@ -51,10 +52,23 @@ function SearchBar({ placeholder, data }) {
   return (
     <S.FormStyle>
       <S.SearchInputs>
-        <S.InputStyle type="text" placeholder={placeholder} value={wordEntered} onChange={handleFilter} />
-        <S.IconStyle>
-          {filteredData.length === 0 ? <SearchIcon /> : <CloseIcon id="clearBtn" onClick={clearInput} />}
-        </S.IconStyle>
+        <S.SearchWrapper>
+          <S.InputStyle
+            isLoggin={isLoggin}
+            type="text"
+            placeholder={placeholder}
+            value={wordEntered}
+            onChange={handleFilter}
+          />
+          <S.IconStyle>
+            {filteredData.length === 0 ? <SearchIcon /> : <CloseIcon id="clearBtn" onClick={clearInput} />}
+          </S.IconStyle>
+          {isLoggin ? (
+            <S.ButtonLogin to="/entrar">
+              <Button text="entrar" isDisabled={false} type={'purple2'} />
+            </S.ButtonLogin>
+          ) : null}
+        </S.SearchWrapper>
       </S.SearchInputs>
       {filteredData.length != 0 && (
         <S.DataResult>

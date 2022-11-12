@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProgressBar = props => {
-  const { bgcolor, completed } = props;
+  const { bgcolor, completed, margin } = props;
 
   const containerStyles = {
     display: 'grid',
@@ -9,6 +9,7 @@ const ProgressBar = props => {
     width: '100%',
     backgroundColor: '#F4F4F4',
     borderRadius: '4px',
+    margin: margin,
   };
 
   const fillerStyles = {

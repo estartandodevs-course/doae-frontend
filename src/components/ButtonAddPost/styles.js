@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  display: grid;
-  justify-content: flex-end;
-  align-items: center;
-  width: 30rem;
+  display: flex;
+  width: 100%;
   height: 4rem;
   margin: 1rem auto;
+  position relative;
 `;
 
 export const ButtonWrapper = styled.div`
@@ -16,18 +15,22 @@ export const ButtonWrapper = styled.div`
   border-radius: 50%;
   position: fixed;
   z-index: 2;
-  left: 25.5rem;
-  top: calc(100vh - 15rem);
+  right: 15px;
+  bottom: 70px;
+`;
+
+export const Button = styled.button`
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
 `;
 
 export const ImgButton = styled.img`
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
-  position: fixed;
-  z-index: 2;
-  left: 25.5rem;
-  top: calc(100vh - 15rem);
 
   &:hover {
     filter: brightness(0.9);

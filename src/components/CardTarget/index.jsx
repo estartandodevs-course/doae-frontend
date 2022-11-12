@@ -2,14 +2,17 @@ import * as S from './styles';
 import ViewIcon from '../../assets/svg/ViewIcon.svg';
 import EditIcon from '../../assets/svg/EditIcon1.svg';
 import ProgressBar from '../DonationsAmount/progressbar';
+import { showModal } from '../../components/ModalWrapping';
+import { EditTargetModel } from '../EditTargetModel';
+import { NewTargetModal } from '../NewTargetModal';
 
 export const CardTarget = ({ name, target, final_value }) => {
   return (
     <S.Wrapper>
       <S.WrapperC>
         <S.EditOptions>
-          <S.Icon src={EditIcon} />
-          <S.Icon src={ViewIcon} />
+          <S.Icon src={EditIcon} onClick={() => showModal(<NewTargetModal />)} />
+          <S.Icon src={ViewIcon} onClick={() => showModal(<EditTargetModel />)} />
         </S.EditOptions>
         <S.InfoWrapper>
           <S.InfoTitle>{name}</S.InfoTitle>

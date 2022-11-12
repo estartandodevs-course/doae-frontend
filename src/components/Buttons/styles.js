@@ -33,10 +33,25 @@ export const Buttons = styled.button`
       height: 3.8rem;
       width: 17.8rem;
     }
+    &.purple2 {
+      background-color: ${theme.colors.primary04};
+      height: 100%;
+      width: 100%;
+    }
+    &.purple3 {
+      background-color: ${theme.colors.primary04};
+      height: ${theme.height.sizes.medium};
+      width: 100%;
+    }
     &.pink {
       background-color: ${theme.colors.primary01};
       height: ${theme.height.sizes.medium};
       width: ${theme.width.sizes.medium};
+    }
+    &.pink2 {
+      background-color: ${theme.colors.primary01};
+      height: ${theme.height.sizes.medium};
+      width: 100%;
     }
     &.secondary {
       color: ${theme.colors.primary04};
@@ -44,6 +59,19 @@ export const Buttons = styled.button`
       border: 0.2rem solid #852baf;
       height: ${theme.height.sizes.medium};
       width: ${theme.width.sizes.large};
+
+      &:hover {
+        opacity: none;
+        transition: none;
+      }
+    }
+    &.secondary2 {
+      color: ${theme.colors.primary04};
+      background-color: ${theme.colors.white};
+      border: 0.2rem solid #852baf;
+      height: ${theme.height.sizes.medium};
+      width: 100%;
+      font-weight: 900;
 
       &:hover {
         opacity: none;
