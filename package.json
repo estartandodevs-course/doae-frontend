@@ -11,7 +11,7 @@
     "react-router-dom": "^6.4.3",
     "react-redux": "^8.0.5",
     "react-scripts": "^5.0.1",
-    "styled-components": "^5.3.6",
+    "styled-components": "^5.3.8",
     "stylelint-config-styled-components": "^0.1.1"
   },
   "scripts": {
